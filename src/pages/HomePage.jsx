@@ -1,5 +1,12 @@
-const HomePage = () => {
-  return <h1>I was DRUNK when I wrote THIS</h1>;
+import Places from './Places';
+const HomePage = (props) => {
+  const { data } = props;
+  return (
+    <div>
+      <h1>welcome</h1>
+      <Places data={data} />
+    </div>
+  );
 };
 
 export default HomePage;

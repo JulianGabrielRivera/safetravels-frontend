@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-// import { AuthContext } from '../context/auth.context';
+import { AuthContext } from '../context/auth.context';
 
 const LoginPage = (props) => {
   // set the state so wehn you get into the page it will be blank with no values
@@ -12,7 +12,7 @@ const LoginPage = (props) => {
   // used to navigate to next page it is a custom hook
   const navigate = useNavigate();
 
-  // const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, authenticateUser } = useContext(AuthContext);
 
   // handles the changes inside these text boxes
   const handleEmail = (e) => setEmail(e.target.value);
@@ -28,8 +28,8 @@ const LoginPage = (props) => {
     axios
       .post('http://localhost:5005/auth/login', requestBody)
       .then((response) => {
-        // storeToken(response.data.authToken);
-        // authenticateUser();
+        storeToken(response.data.authToken);
+        authenticateUser();
         navigate('/');
         console.log(response);
       })

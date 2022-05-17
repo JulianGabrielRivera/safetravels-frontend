@@ -52,6 +52,7 @@ const SignupPage = () => {
       <form onSubmit={handleSubmit}>
         <label htmlFor='emailClick'>Email:</label>
         {/* ask about value and email */}
+        {/* access by name and gets value */}
         <input type='text' name='email' value={email} onChange={handleEmail} />
 
         <label htmlFor='passwordClick'>Password:</label>
