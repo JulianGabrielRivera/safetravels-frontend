@@ -21,8 +21,8 @@ function App() {
 
   useEffect(() => {
     axios.get('http://localhost:5005/api/places').then((response) => {
-      console.log(response.data);
-      setPlacesData([...response.data]);
+      console.log(response.data.message);
+      setPlacesData([...response.data.message]);
     });
   }, []);
   return (

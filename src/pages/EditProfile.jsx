@@ -9,8 +9,13 @@ const EditProfile = () => {
   const fileSelectedHandler = (event) => {
     setImage(event.target.files);
   };
-  const requestBody = { image };
-  return <input type='file' onChange={fileSelectedHandler} value={image} />;
+
+  return (
+    <div>
+      <h1>Hey</h1>
+      <input type='file' onChange={fileSelectedHandler} value={image} />
+    </div>
+  );
 };
 
 export default EditProfile;
