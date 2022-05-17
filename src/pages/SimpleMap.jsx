@@ -19,7 +19,7 @@
 //       // Important! Always set the container height explicitly
 //       <div style={{ height: '40vh', width: '40%' }}>
 //         <GoogleMapReact
-//           bootstrapURLKeys={{ key: 'AIzaSyA2RKQe3KSabpZjBu_oeF3wfCP02Ar04xc' }}
+//           bootstrapURLKeys={{ key: 'process.env.GOOGLE_MAP' }}
 //           defaultCenter={this.props.center}
 //           defaultZoom={this.props.zoom}
 //         >
